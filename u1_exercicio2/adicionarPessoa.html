@@ -6,6 +6,7 @@
     <title>PWeb - by Carlos Alberto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
+    <script type="text/javascript" src="tabelaCadastro.js"> </script>
 </head>
 
 <body>
@@ -20,35 +21,39 @@
     </ul>
 
     <!-- Iniciando a construção do formulário-->
-    <h1>Formulário para cadastro de pessoas:</h1>
-    <form action="adicionadaComSucesso.html">
+    <div id="formulario">
+        <h1>Formulário para cadastro de pessoas:</h1>
+        <form action="adicionadaComSucesso.html" name="cadPessoas">
 
-        <label for="nomeCompleto"> Nome completo *: </label>
-        <input required type="text" name="nomeCompleto" placeholder="Seu nome completo" />
-        <br /> <br />
+            <label for="nomeCompleto"> Nome completo *: </label>
+            <input required type="text" name="nomeCompleto" placeholder="Insira seu nome completo" />
+            <br />
+            <br />
+            Data de nascimento *: <input type="date" name="dataNascimento">
+            <br />
+            <br />
+            <label for="e-Mail"> e-Mail *:</label>
+            <input required type="text" name="e-Mail" placeholder="nome@dominio.com" />
+            <p>Sexo*:</p>
+            <input type="radio" name="opcaoSexo" value="masculino"> Masculino
+            <br />
+            <br />
+            <input type="radio" name="opcaoSexo" value="feminino"> Feminino
+            <br />
+            <br />
+            <input type="radio" name="opcaoSexo" value="não informar"> Não informar
+            <br />
+            <br />
+            <input type="reset" value="Limpar">
+            <input type="button" value="Cadastrar!" 
+                onclick="cadastroPessoa(nomeCompleto.value, 
+                dataNascimento.value, e-Mail.value, opcaoSexo.value)"/>
+            <br />
+            <br />
+            <p>* Campo obrigatório</p>
+        </form>
+    </div>
 
-        Data de nascimento *: <input type="date">
-        <br /> <br />
-
-        <label for="e-Mail"> e-Mail *:</label>
-        <input required type="text" name="e-Mail" placeholder="nome@dominio.com" />
-
-        <p>Sexo*:</p>
-        <input type="radio" name="opcao" value="masculino"> Masculino
-        <br />
-        <br />
-        <input type="radio" name="opcao" value="feminio"> Feminino
-        <br />
-        <br />
-        <input type="radio" name="opcao" value="não informar"> Não informar
-        <br/>
-        <br />
-        <input type="submit" value="Limpar">
-        <input type="submit" value="Cadastrar!">
-        <br />
-        <br />
-        <p>* Campo obrigatório</p>
-    </form>
 </body>
 
 </html>

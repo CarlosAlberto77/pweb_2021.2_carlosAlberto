@@ -43,3 +43,17 @@ ul.topnav li.right {
     float: none;
   }
 }
+
+div {
+  margin-left: 25px;
+}
+
+table tr td{
+  width: 200px;
+  font-weight: bold
+}
+table{
+  border:  1px solid;
+  width: 98%;
+  border-collapse: collapse;
+}
