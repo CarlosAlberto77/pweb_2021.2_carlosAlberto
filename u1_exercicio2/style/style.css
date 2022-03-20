@@ -48,12 +48,34 @@ div {
   margin-left: 25px;
 }
 
-table tr td{
-  width: 200px;
+table tr td {
+  width: 100px;
   font-weight: bold
 }
-table{
-  border:  1px solid;
+
+table {
+  border: 1px solid;
   width: 98%;
-  border-collapse: collapse;
+}
+
+.form-submit-button{
+  background: rgb(44, 144, 16);
+  color: white;
+  border-style: outset;
+  border-color: rgb(44, 144, 16);
+  height: 50px;
+  width: 100px;
+  font: 15px;
+  text-shadow: none;
+}
+
+.form-reset-button{
+  background: rgb(44, 144, 16);
+  color: white;
+  border-style: outset;
+  border-color: rgb(44, 144, 16);
+  height: 50px;
+  width: 100px;
+  font: 15px;
+  text-shadow: none;
 }

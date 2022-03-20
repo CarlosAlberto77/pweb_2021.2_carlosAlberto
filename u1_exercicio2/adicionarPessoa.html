@@ -6,7 +6,6 @@
     <title>PWeb - by Carlos Alberto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/style.css">
-    <script type="text/javascript" src="tabelaCadastro.js"> </script>
 </head>
 
 <body>
@@ -21,9 +20,9 @@
     </ul>
 
     <!-- Iniciando a construção do formulário-->
-    <div id="formulario">
+    <div>
         <h1>Formulário para cadastro de pessoas:</h1>
-        <form action="adicionadaComSucesso.html" name="cadPessoas">
+        <form action="adicionadaComSucesso.html">
 
             <label for="nomeCompleto"> Nome completo *: </label>
             <input required type="text" name="nomeCompleto" placeholder="Insira seu nome completo" />
@@ -45,9 +44,7 @@
             <br />
             <br />
             <input type="reset" value="Limpar">
-            <input type="button" value="Cadastrar!" 
-                onclick="cadastroPessoa(nomeCompleto.value, 
-                dataNascimento.value, e-Mail.value, opcaoSexo.value)"/>
+            <input type="submit" value="Cadastrar!">
             <br />
             <br />
             <p>* Campo obrigatório</p>
