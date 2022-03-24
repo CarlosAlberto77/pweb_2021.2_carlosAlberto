@@ -1,0 +1,355 @@
+2022-03-24 11:20:32.292  INFO 19008 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 19008 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:20:32.296  INFO 19008 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:20:32.500  INFO 19008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:20:32.502  INFO 19008 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:20:35.290  INFO 19008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:20:35.353  INFO 19008 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 26 ms. Found 0 JPA repository interfaces.
+2022-03-24 11:20:37.418  INFO 19008 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:20:37.448  INFO 19008 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:20:37.449  INFO 19008 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:20:37.742  INFO 19008 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:20:37.745  INFO 19008 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5236 ms
+2022-03-24 11:20:37.852  INFO 19008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:20:38.410  INFO 19008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:20:38.438  INFO 19008 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:20:40.454 ERROR 19008 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: No identifier specified for entity: br.com.carlosalberto.cadpessoas.model.Pessoa
+2022-03-24 11:20:40.456  WARN 19008 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: br.com.carlosalberto.cadpessoas.model.Pessoa
+2022-03-24 11:20:40.696  WARN 19008 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-24 11:20:40.697  INFO 19008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-24 11:20:40.705  INFO 19008 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-24 11:20:40.711  INFO 19008 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-24 11:20:40.740  INFO 19008 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-24 11:20:40.812 ERROR 19008 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: No identifier specified for entity: br.com.carlosalberto.cadpessoas.model.Pessoa
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:908) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at br.com.carlosalberto.cadpessoas.CadPessoasApplication.main(CadPessoasApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: org.hibernate.AnnotationException: No identifier specified for entity: br.com.carlosalberto.cadpessoas.model.Pessoa
+	at org.hibernate.cfg.InheritanceState.determineDefaultAccessType(InheritanceState.java:266) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.cfg.InheritanceState.getElementsToProcess(InheritanceState.java:211) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.cfg.AnnotationBinder.bindClass(AnnotationBinder.java:771) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.boot.model.source.internal.annotations.AnnotationMetadataSourceProcessorImpl.processEntityHierarchies(AnnotationMetadataSourceProcessorImpl.java:225) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess$1.processEntityHierarchies(MetadataBuildingProcess.java:239) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:282) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1460) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1494) ~[hibernate-core-5.6.5.Final.jar:5.6.5.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:58) ~[spring-orm-5.3.16.jar:5.3.16]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365) ~[spring-orm-5.3.16.jar:5.3.16]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:409) ~[spring-orm-5.3.16.jar:5.3.16]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:396) ~[spring-orm-5.3.16.jar:5.3.16]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:341) ~[spring-orm-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 21 common frames omitted
+
+2022-03-24 11:25:57.395  INFO 7272 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 7272 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:25:57.411  INFO 7272 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:25:57.537  INFO 7272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:25:57.537  INFO 7272 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:25:59.881  INFO 7272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:26:00.098  INFO 7272 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 180 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:26:02.550  INFO 7272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:26:02.585  INFO 7272 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:26:02.588  INFO 7272 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:26:03.129  INFO 7272 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:26:03.130  INFO 7272 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5593 ms
+2022-03-24 11:26:03.288  INFO 7272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:26:04.057  INFO 7272 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:26:04.103  INFO 7272 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:26:07.975  INFO 7272 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:26:09.623  INFO 7272 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:26:10.182  INFO 7272 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:26:11.091  INFO 7272 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:26:11.111  INFO 7272 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 14.853 seconds (JVM running for 18.242)
+2022-03-24 11:26:26.147  INFO 8016 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 8016 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:26:26.147  INFO 8016 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:26:26.311  INFO 8016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:26:26.311  INFO 8016 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:26:28.249  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:26:28.386  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 118 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:26:30.453  INFO 8016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:26:30.500  INFO 8016 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:26:30.504  INFO 8016 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:26:30.906  INFO 8016 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:26:30.909  INFO 8016 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4598 ms
+2022-03-24 11:26:31.007  INFO 8016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:26:31.711  INFO 8016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:26:31.752  INFO 8016 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:26:35.202  INFO 8016 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:26:36.484  INFO 8016 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:26:36.918  INFO 8016 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:26:37.772  INFO 8016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:26:37.794  INFO 8016 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 12.814 seconds (JVM running for 15.502)
+2022-03-24 11:27:22.397  INFO 8016 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:27:22.634  WARN 8016 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-24 11:27:22.634  INFO 8016 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-24 11:27:22.646  INFO 8016 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-24 11:27:22.864  INFO 8016 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 8016 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:27:22.864  INFO 8016 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:27:23.800  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:27:23.823  INFO 8016 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 18 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:27:24.386  INFO 8016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:27:24.388  INFO 8016 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:27:24.388  INFO 8016 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:27:24.592  INFO 8016 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:27:24.592  INFO 8016 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1717 ms
+2022-03-24 11:27:24.654  INFO 8016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-03-24 11:27:24.785  INFO 8016 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-03-24 11:27:24.786  INFO 8016 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:27:25.618  INFO 8016 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:27:26.045  INFO 8016 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:27:26.226  INFO 8016 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:27:26.253  INFO 8016 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:27:26.267  INFO 8016 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 3.514 seconds (JVM running for 63.968)
+2022-03-24 11:27:26.271  INFO 8016 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-24 11:28:05.506  INFO 12892 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 12892 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:28:05.521  INFO 12892 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:28:05.671  INFO 12892 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:28:05.671  INFO 12892 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:28:07.664  INFO 12892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:28:07.844  INFO 12892 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 149 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:28:10.348  INFO 12892 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:28:10.396  INFO 12892 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:28:10.411  INFO 12892 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:28:10.862  INFO 12892 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:28:10.863  INFO 12892 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5192 ms
+2022-03-24 11:28:11.033  INFO 12892 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:28:11.897  INFO 12892 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:28:11.936  INFO 12892 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:28:15.628  INFO 12892 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:28:17.000  INFO 12892 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:28:17.707  INFO 12892 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:28:19.027  INFO 12892 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:28:19.059  INFO 12892 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 14.59 seconds (JVM running for 17.314)
+2022-03-24 11:28:48.893  INFO 8248 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 8248 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:28:48.893  INFO 8248 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:28:49.058  INFO 8248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:28:49.060  INFO 8248 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:28:50.893  INFO 8248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:28:51.064  INFO 8248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 139 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:28:53.106  INFO 8248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:28:53.161  INFO 8248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:28:53.171  INFO 8248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:28:53.786  INFO 8248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:28:53.787  INFO 8248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4727 ms
+2022-03-24 11:28:53.922  INFO 8248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:28:54.836  INFO 8248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:28:54.923  INFO 8248 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:28:59.928  INFO 8248 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:29:01.170  INFO 8248 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:29:01.564  INFO 8248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:29:02.420  INFO 8248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:29:02.454  INFO 8248 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 14.689 seconds (JVM running for 17.536)
+2022-03-24 11:31:01.742  INFO 8248 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 11:31:01.744  INFO 8248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 11:31:01.748  INFO 8248 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-24 11:33:01.314  INFO 7916 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 7916 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:33:01.319  INFO 7916 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:33:01.449  INFO 7916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:33:01.450  INFO 7916 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:33:03.354  INFO 7916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:33:03.490  INFO 7916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 113 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:33:05.683  INFO 7916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:33:05.718  INFO 7916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:33:05.722  INFO 7916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:33:06.124  INFO 7916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:33:06.126  INFO 7916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4674 ms
+2022-03-24 11:33:06.281  INFO 7916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:33:07.801  INFO 7916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:33:07.858  INFO 7916 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:33:14.886  INFO 7916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:33:16.979  INFO 7916 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:33:17.815  INFO 7916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:33:18.807  INFO 7916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:33:18.825  INFO 7916 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 18.601 seconds (JVM running for 21.537)
+2022-03-24 11:33:21.510  INFO 7916 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 11:33:21.512  INFO 7916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 11:33:21.529  INFO 7916 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-24 11:58:10.814  INFO 20672 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 20672 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 11:58:10.818  INFO 20672 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 11:58:10.997  INFO 20672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 11:58:10.998  INFO 20672 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 11:58:16.795  INFO 20672 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 11:58:17.094  INFO 20672 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 257 ms. Found 1 JPA repository interfaces.
+2022-03-24 11:58:19.211  INFO 20672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 11:58:19.234  INFO 20672 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 11:58:19.234  INFO 20672 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 11:58:19.507  INFO 20672 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 11:58:19.507  INFO 20672 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8503 ms
+2022-03-24 11:58:19.602  INFO 20672 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 11:58:20.265  INFO 20672 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 11:58:20.295  INFO 20672 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 11:58:24.631  INFO 20672 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 11:58:26.548  INFO 20672 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 11:58:27.501  INFO 20672 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 11:58:28.365  INFO 20672 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 11:58:28.420  INFO 20672 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 18.823 seconds (JVM running for 22.231)
+2022-03-24 11:58:28.604  INFO 20672 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 11:58:28.605  INFO 20672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 11:58:28.608  INFO 20672 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-24 12:03:06.666  INFO 7648 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 7648 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 12:03:06.671  INFO 7648 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 12:03:06.893  INFO 7648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 12:03:06.895  INFO 7648 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 12:03:10.228  INFO 7648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 12:03:10.409  INFO 7648 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 146 ms. Found 1 JPA repository interfaces.
+2022-03-24 12:03:13.834  INFO 7648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 12:03:13.901  INFO 7648 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 12:03:13.903  INFO 7648 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 12:03:14.255  INFO 7648 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 12:03:14.256  INFO 7648 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 7356 ms
+2022-03-24 12:03:14.349  INFO 7648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 12:03:14.973  INFO 7648 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 12:03:15.007  INFO 7648 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 12:03:18.749  INFO 7648 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 12:03:20.557  INFO 7648 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 12:03:21.161  INFO 7648 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 12:03:22.079  INFO 7648 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 12:03:22.181  INFO 7648 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 16.819 seconds (JVM running for 19.326)
+2022-03-24 12:03:22.514  INFO 7648 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 12:03:22.523  INFO 7648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 12:03:22.532  INFO 7648 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-03-24 14:40:51.154  INFO 14696 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 14696 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 14:40:51.158  INFO 14696 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 14:40:51.312  INFO 14696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 14:40:51.314  INFO 14696 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 14:40:53.741  INFO 14696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 14:40:53.901  INFO 14696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 132 ms. Found 1 JPA repository interfaces.
+2022-03-24 14:40:55.943  INFO 14696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 14:40:55.994  INFO 14696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 14:40:55.996  INFO 14696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 14:40:56.309  INFO 14696 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 14:40:56.313  INFO 14696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4995 ms
+2022-03-24 14:40:56.465  INFO 14696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 14:40:57.445  INFO 14696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 14:40:57.507  INFO 14696 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 14:41:02.387  INFO 14696 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 14:41:03.815  INFO 14696 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 14:41:04.457  INFO 14696 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 14:41:05.710  INFO 14696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 14:41:05.756  INFO 14696 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 15.849 seconds (JVM running for 19.353)
+2022-03-24 14:41:14.922  INFO 14696 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 14:41:14.923  INFO 14696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 14:41:14.927  INFO 14696 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-24 14:42:41.219  INFO 14696 --- [Thread-6] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 14:42:41.489  WARN 14696 --- [Thread-6] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-24 14:42:41.491  INFO 14696 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-24 14:42:41.541  INFO 14696 --- [Thread-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-24 14:42:41.915  INFO 14696 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 14696 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 14:42:41.916  INFO 14696 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 14:42:43.518  INFO 14696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 14:42:43.557  INFO 14696 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+2022-03-24 14:42:44.577  INFO 14696 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 14:42:44.580  INFO 14696 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 14:42:44.582  INFO 14696 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 14:42:44.832  INFO 14696 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 14:42:44.834  INFO 14696 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2909 ms
+2022-03-24 14:42:44.896  INFO 14696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-03-24 14:42:44.908  INFO 14696 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-03-24 14:42:49.944  INFO 14696 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 14:43:09.496  INFO 19624 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 19624 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 14:43:09.510  INFO 19624 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 14:43:09.831  INFO 19624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 14:43:09.832  INFO 19624 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 14:43:13.443  INFO 19624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 14:43:13.785  INFO 19624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 295 ms. Found 1 JPA repository interfaces.
+2022-03-24 14:43:15.947  INFO 19624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 14:43:15.992  INFO 19624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 14:43:15.993  INFO 19624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 14:43:16.276  INFO 19624 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 14:43:16.280  INFO 19624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6446 ms
+2022-03-24 14:43:16.392  INFO 19624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 14:43:17.356  INFO 19624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 14:43:17.403  INFO 19624 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 14:43:21.187  INFO 19624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 14:43:22.908  INFO 19624 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 14:43:23.408  INFO 19624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 14:43:24.226  INFO 19624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 14:43:24.252  INFO 19624 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 16.221 seconds (JVM running for 18.843)
+2022-03-24 14:43:25.150  INFO 19624 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 14:43:25.155  INFO 19624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 14:43:25.159  INFO 19624 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-24 14:44:13.753  INFO 19308 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 19308 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in c:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 14:44:13.760  INFO 19308 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 14:44:14.096  INFO 19308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 14:44:14.103  INFO 19308 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 14:44:17.481  INFO 19308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 14:44:17.761  INFO 19308 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 249 ms. Found 1 JPA repository interfaces.
+2022-03-24 14:44:17.982  INFO 14596 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Starting CadPessoasApplication using Java 13.0.2 on DESKTOP-I81G32P with PID 14596 (C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto\target\classes started by Patrícia Fonseca in C:\github\GitHub\u1_exercicio3\cadpessoas_carlosalberto)
+2022-03-24 14:44:17.986  INFO 14596 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : No active profile set, falling back to 1 default profile: "default"
+2022-03-24 14:44:18.329  INFO 14596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-24 14:44:18.330  INFO 14596 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-24 14:44:21.683  INFO 19308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 14:44:21.725  INFO 19308 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 14:44:21.726  INFO 19308 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 14:44:22.142  INFO 19308 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 14:44:22.145  INFO 19308 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8038 ms
+2022-03-24 14:44:22.436  INFO 19308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 14:44:23.182  INFO 14596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-24 14:44:23.470  INFO 14596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 233 ms. Found 1 JPA repository interfaces.
+2022-03-24 14:44:23.906  INFO 19308 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 14:44:23.960  INFO 19308 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 14:44:28.048  INFO 14596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2022-03-24 14:44:28.088  INFO 14596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-24 14:44:28.091  INFO 14596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-24 14:44:28.687  INFO 14596 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-24 14:44:28.690  INFO 14596 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 10358 ms
+2022-03-24 14:44:28.813  INFO 14596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-24 14:44:29.527  INFO 19308 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 14:44:29.780  INFO 14596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-24 14:44:29.815  INFO 14596 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cadpessoas'
+2022-03-24 14:44:32.407  INFO 19308 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 14:44:33.304  INFO 19308 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-24 14:44:34.354  INFO 19308 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2022-03-24 14:44:34.390  INFO 19308 --- [restartedMain] b.c.c.cadpessoas.CadPessoasApplication   : Started CadPessoasApplication in 22.134 seconds (JVM running for 24.913)
+2022-03-24 14:44:34.553  INFO 19308 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-24 14:44:34.561  INFO 19308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-24 14:44:34.565  INFO 19308 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-03-24 14:44:35.285  INFO 14596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 14:44:37.480  INFO 14596 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2022-03-24 14:44:37.931  WARN 14596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-03-24 14:44:38.037  WARN 14596 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8080 is already in use
+2022-03-24 14:44:38.044  INFO 14596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-24 14:44:38.289  WARN 14596 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-24 14:44:38.339  INFO 14596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-24 14:44:38.376  INFO 14596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-24 14:44:38.387  INFO 14596 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-24 14:44:38.468  INFO 14596 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-24 14:44:38.617 ERROR 14596 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

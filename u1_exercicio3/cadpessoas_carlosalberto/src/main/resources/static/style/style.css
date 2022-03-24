@@ -1,0 +1,81 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(62, 173, 31);
+}
+
+ul.topnav li {
+  float: left;
+}
+
+ul.topnav li a {
+  display: block;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {
+  background-color: rgb(44, 144, 16);
+}
+
+ul.topnav li a.active {
+  background-color: #ad38c2e3;
+}
+
+ul.topnav li.right {
+  float: right;
+}
+
+@media screen and (max-width: 600px) {
+
+  ul.topnav li.right,
+  ul.topnav li {
+    float: none;
+  }
+}
+
+div {
+  margin-left: 25px;
+}
+
+table tr td {
+  width: 100px;
+  font-weight: bold
+}
+
+table {
+  border: 1px solid;
+  width: 98%;
+}
+
+.form-submit-button{
+  background: rgb(44, 144, 16);
+  color: white;
+  border-style: outset;
+  border-color: rgb(44, 144, 16);
+  height: 50px;
+  width: 100px;
+  font: 15px;
+  text-shadow: none;
+}
+
+.form-reset-button{
+  background: rgb(44, 144, 16);
+  color: white;
+  border-style: outset;
+  border-color: rgb(44, 144, 16);
+  height: 50px;
+  width: 100px;
+  font: 15px;
+  text-shadow: none;
+}

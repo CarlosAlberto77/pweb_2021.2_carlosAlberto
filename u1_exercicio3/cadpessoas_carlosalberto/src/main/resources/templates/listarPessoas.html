@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<head>
+    <codigoSecreto="98917952" />
+    <title>PWeb - by Carlos Alberto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+
+    <ul class="topnav">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="adicionarPessoa.html">Adicionar pessoa</a></li>
+        <li><a class="active" href="listarPessoas.html">Listar pessoas</a></li>
+        <li><a href="noticias.html">Canais de notícias</a></li>
+        <li><a href="contato.html">Mande um e-Mail</a></li>
+        <li class="right"><a href="sobre.html">Sobre o site</a>
+        </li>
+    </ul>
+    
+    <div>
+        <h1> Lista de pessoas cadastradas (em h1) </h1>
+    </div>
+
+    <!-- Iniciando a construção da tabela de informçãoes -->
+    <div style="margin-left:25%;padding:1px 16px;height:1000px">
+        <center><h1>Lista de pessoas</h1></center>
+        <table>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Nome completo</td>
+                    <td>Data de Nascimento</td>
+                    <td>e-Mail</td>
+                    <td>Sexo</td>
+                    <td>Editar</td>
+                    <td>Remover</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="pessoa: ${pessoas}">
+                    <td th:text="${pessoas.id}"></td>
+                    <td th:text="${pessoas.nome}"></td>
+                    <td>
+                        <a th:href="'mailto:'+${pessoa.email}"th:text="${pessoa.email}"></a>
+                    </td>
+                    <td th:text="$temporals.format(pessoa.dataNascimento, 'dd/MM/yyyy')"></td>
+                    <td th:text="${pessoa.genero}">></td>
+                    <td>
+                        <a th:href="@{/editar/{id}(id=${pessoa})}"Editar></a>
+                    </td>
+                    <td>
+                        <a th:href="@{/remover/{id}(id=${pessoa})}"Remover></a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
