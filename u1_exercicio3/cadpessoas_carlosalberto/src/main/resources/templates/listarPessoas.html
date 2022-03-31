@@ -2,21 +2,26 @@
 <html lang="pt_br">
 
 <head>
-    <codigoSecreto="98917952" />
-    <title>PWeb - by Carlos Alberto</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <meta codigoSecreto=>
+    <link th:href="@{/public/favicon.ico}" rel="icon" type="image/x-icon" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Listar Pessoas - Com Spring</title>
 </head>
 
 <body>
 
     <ul class="topnav">
-        <li><a href="index.html">Início</a></li>
-        <li><a href="adicionarPessoa.html">Adicionar pessoa</a></li>
-        <li><a class="active" href="listarPessoas.html">Listar pessoas</a></li>
-        <li><a href="noticias.html">Canais de notícias</a></li>
-        <li><a href="contato.html">Mande um e-Mail</a></li>
-        <li class="right"><a href="sobre.html">Sobre o site</a>
+        <li><a href="/">Início</a></li>
+        <hr />
+        <li><a href="/adicionarPessoa">Adicionar pessoa</a></li>
+        <li><a class="active" href="/listarPessoas" >Listar pessoas</a></li>
+        <hr />
+        <li><a href="/public/noticias.html">Canais de notícias</a></li>
+        <li><a href="/public/contato.html">Mande um e-Mail</a></li>
+        <li class="right"><a href="/public/sobre.html">Sobre o site</a>
         </li>
     </ul>
     
@@ -49,10 +54,10 @@
                     <td th:text="$temporals.format(pessoa.dataNascimento, 'dd/MM/yyyy')"></td>
                     <td th:text="${pessoa.genero}">></td>
                     <td>
-                        <a th:href="@{/editar/{id}(id=${pessoa})}"Editar></a>
+                        <a th:href="@{/editar/{id}(id=${pessoa.id})}">Editar</a>
                     </td>
                     <td>
-                        <a th:href="@{/remover/{id}(id=${pessoa})}"Remover></a>
+                        <a th:href="@{/remover/{id}(id=${pessoa.id})}">Remover</a>
                     </td>
                 </tr>
             </tbody>
