@@ -2,10 +2,13 @@
 <html lang="pt_br">
 
 <head>
-    <codigoSecreto="98917952" />
-    <title>PWeb - by Carlos Alberto</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/style.css">
+    <meta codigoSecreto="705200944">
+    <link th:href="@{/public/favicon.ico}" rel="icon" type="image/x-icon" />
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+    <title>Editar Pessoa - Com Spring</title>
 </head>
 
 <body>
@@ -20,31 +23,35 @@
         </li>
     </ul>
 
-    <div>
-        <h1>Formulário para cadastro de pessoas:</h1>
-        <form action="adicionadaComSucesso.html">
-
+    <div style="margin-left:25%;padding:1px 16px;height:1000px;">
+        <h1>Editar pessoa:</h1>
+        <form action="adicionadaComSucesso.html"
+            th:action="@{/editar/{id}(id=${pessoa.id})}"
+            th:object="${pessoa}"
+            method="POST">
+        
             <label for="nomeCompleto"> Nome completo *: </label>
-            <input required type="text" name="nomeCompleto" placeholder="Insira seu nome completo" />
+            <input required type="text" name="nomeCompleto" placeholder="Insira seu nome completo" 
+            th:field="*{nome}" />
             <br />
             <br />
-            Data de nascimento *: <input type="date" name="dataNascimento">
+            Data de nascimento *: <input required type="date" name="dataNascimento" th:field="*{dataNascimento}" />
             <br />
             <br />
             <label for="e-Mail"> e-Mail *:</label>
-            <input required type="text" name="e-Mail" placeholder="nome@dominio.com" />
+            <input required type="text" name="e-Mail" placeholder="nome@dominio.com" th:field="*{email}" />
             <p>Sexo*:</p>
-            <input type="radio" name="opcaoSexo" value="masculino"> Masculino
+            <input type="radio" name="genero" value="masculino" th:field="*{genero}" required /> Masculino
             <br />
             <br />
-            <input type="radio" name="opcaoSexo" value="feminino"> Feminino
+            <input type="radio" name="genero" value="feminino" th:field="*{genero}" required /> Feminino
             <br />
             <br />
-            <input type="radio" name="opcaoSexo" value="não informar"> Não informar
+            <input type="radio" name="genero" value="não informar" th:field="*{genero}" required /> Não informar
             <br />
             <br />
-            <input type="reset" value="Limpar">
-            <input type="submit" value="Cadastrar!">
+            <input type="reset" class="button button12Px" value="Limpar">
+            <input type="submit" class="button button12Px" value="Cadastrar!">
             <br />
             <br />
             <p>* Campo obrigatório</p>
